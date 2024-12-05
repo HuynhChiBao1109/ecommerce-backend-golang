@@ -1,7 +1,7 @@
 package routers
 
 import (
-	"net/http"
+	"ecommerce-backend-golang/internal/controller"
 
 	"github.com/gin-gonic/gin"
 )
@@ -9,16 +9,10 @@ import (
 func InitRouter() *gin.Engine {
 	r := gin.Default()
 
-	path := r.Group("/v1/api")
+	path := r.Group("/v1")
 	{
-		path.GET("/ping/:id", ping)
+		path.GET("/ping/:id", controller.NewUserController().GetListuser)
 	}
 
 	return r
-}
-
-func ping(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{
-		"message": "pong",
-	})
 }
