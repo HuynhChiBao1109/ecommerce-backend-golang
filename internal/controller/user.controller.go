@@ -2,7 +2,7 @@ package controller
 
 import (
 	"ecommerce-backend-golang/internal/service"
-	"net/http"
+	"ecommerce-backend-golang/pkg/response"
 
 	"github.com/gin-gonic/gin"
 )
@@ -19,13 +19,5 @@ func NewUserController() *UserController {
 
 // Controller => Service => Repo => Model => DB
 func (uc *UserController) GetListuser(c *gin.Context) {
-	// Get id
-	id := c.Param("id")
-	test := c.Query("test")
-	c.JSON(http.StatusOK, gin.H{
-		"message": uc.userService.GetListUser(),
-		"status":  http.StatusOK,
-		"id":      id,
-		"param":   test,
-	})
+	response.SuccessReponse(c, 20001, uc.userService.GetListUser())
 }
