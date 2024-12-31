@@ -1,4 +1,4 @@
-package main
+package initialize
 
 import (
 	"os"
@@ -7,7 +7,7 @@ import (
 	"go.uber.org/zap/zapcore"
 )
 
-func main() {
+func InitLogger() {
 	enCoder := configEncode()
 	sync := writeLogSync()
 	core := zapcore.NewCore(enCoder, sync, zapcore.InfoLevel)

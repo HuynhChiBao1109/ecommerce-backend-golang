@@ -1,8 +1,15 @@
 server:
   port: 8080
   host: localhost
-database:
-  - user: root
-    password: test
-  - user: root1
-    password: test1
+mysql:
+  host: localhost
+  port: 3306
+  user: root
+  password: 123456
+  database: testgo
+  maxIdleConns: 10 # max idle connections
+  maxOpenConns: 100 # max open connections
+  connMaxLifetime: 3600 # connection max lifetime
+redis:
+  host: localhost
+  port: 6379
