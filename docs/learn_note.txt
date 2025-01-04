@@ -4,3 +4,8 @@
 // HTTP gin
 1. func is export when Uppercase frist letter
 
+
+
+// 
+viper read config
+zapper log

@@ -13,3 +13,10 @@ mysql:
 redis:
   host: localhost
   port: 6379
+logger:
+  file_name: "./storage/logs/dev.001.log"
+  max_size: 500
+  max_backups: 3
+  max_age: 28
+  compress: true
+  log_level: debug
