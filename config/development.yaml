@@ -2,14 +2,14 @@ server:
   port: 8080
   host: localhost
 mysql:
-  host: localhost
+  host: 127.0.0.1
   port: 3306
-  user: root
+  username: root
   password: 123456
   database: testgo
-  maxIdleConns: 10 # max idle connections
-  maxOpenConns: 100 # max open connections
-  connMaxLifetime: 3600 # connection max lifetime
+  max_idle_cons: 10 # max idle connections
+  max_open_cons: 100 # max open connections
+  con_max_life_time: 3600 # connection max lifetime
 redis:
   host: localhost
   port: 6379

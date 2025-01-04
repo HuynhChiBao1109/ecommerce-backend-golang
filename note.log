@@ -1,0 +1,17 @@
+// Need learn
+1. Struct and pointer in Go ?
+
+// HTTP gin
+1. func is export when Uppercase frist letter
+
+
+
+// 
+viper read config
+zapper log
+lumberjack log to file
+
+// folder po
+đóng gói dữ liệu trong database
+mỗi file tương ứng với một bảng trong database
+mỗi struct tương ứng với một dòng trong bảng

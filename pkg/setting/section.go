@@ -6,14 +6,14 @@ type Config struct {
 }
 
 type MySQLSetting struct {
-	Host        string `mapstructure:"host"`
-	Port        int    `mapstructure:"port"`
-	Username    string `mapstructure:"username"`
-	Password    string `mapstructure:"password"`
-	Dbname      string `mapstructure:"dbname"`
-	MaxIdle     int    `mapstructure:"maxidle"`
-	MaxOpen     int    `mapstructure:"maxopen"`
-	ConnMaxTime int    `mapstructure:"connmaxtime"`
+	Host         string `mapstructure:"host"`
+	Port         int    `mapstructure:"port"`
+	Username     string `mapstructure:"username"`
+	Password     string `mapstructure:"password"`
+	Dbname       string `mapstructure:"database"`
+	MaxIdleConns int    `mapstructure:"max_idle_cons"`
+	MaxOpenCons  int    `mapstructure:"max_open_cons"`
+	ConnMaxTime  int    `mapstructure:"con_max_life_time"`
 }
 
 type LoggerSetting struct {
