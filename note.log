@@ -15,3 +15,10 @@ lumberjack log to file
 đóng gói dữ liệu trong database
 mỗi file tương ứng với một bảng trong database
 mỗi struct tương ứng với một dòng trong bảng
+
+// redis
+redis sentinel
+redis cluster 
+
+// context
+context.Background() // tạo context mặc định 

@@ -3,6 +3,7 @@ package setting
 type Config struct {
 	MySQL  MySQLSetting  `mapstructure:"mysql"`
 	Logger LoggerSetting `mapstructure:"logger"`
+	Redis  RedisSetting  `mapstructure:"redis"`
 }
 
 type MySQLSetting struct {
@@ -14,6 +15,14 @@ type MySQLSetting struct {
 	MaxIdleConns int    `mapstructure:"max_idle_cons"`
 	MaxOpenCons  int    `mapstructure:"max_open_cons"`
 	ConnMaxTime  int    `mapstructure:"con_max_life_time"`
+}
+
+type RedisSetting struct {
+	Host     string `mapstructure:"host"`
+	Port     int    `mapstructure:"port"`
+	Password string `mapstructure:"password"`
+	Database int    `mapstructure:"database"`
+	PoolSize int    `mapstructure:"pool_size"`
 }
 
 type LoggerSetting struct {

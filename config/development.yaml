@@ -11,8 +11,11 @@ mysql:
   max_open_cons: 100 # max open connections
   con_max_life_time: 3600 # connection max lifetime
 redis:
-  host: localhost
+  host: 127.0.0.1
   port: 6379
+  password:
+  datbase: 0
+  pool_size: 10
 logger:
   file_name: "./storage/logs/dev.001.log"
   max_size: 500
