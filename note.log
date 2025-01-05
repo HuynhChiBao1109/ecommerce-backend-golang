@@ -22,3 +22,6 @@ redis cluster
 
 // context
 context.Background() // tạo context mặc định 
+
+
+kafka 

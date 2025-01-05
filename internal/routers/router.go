@@ -1,21 +1,14 @@
 package routers
 
-import (
-	"ecommerce-backend-golang/internal/controller"
-	"ecommerce-backend-golang/internal/middlewares"
+// func InitRouter() *gin.Engine {
+// 	r := gin.Default()
 
-	"github.com/gin-gonic/gin"
-)
+// 	r.Use(middlewares.AuthMiddleware())
 
-func InitRouter() *gin.Engine {
-	r := gin.Default()
+// 	path := r.Group("/v1")
+// 	{
+// 		path.GET("/ping/:id", controller.NewUserController().GetListuser)
+// 	}
 
-	r.Use(middlewares.AuthMiddleware())
-
-	path := r.Group("/v1")
-	{
-		path.GET("/ping/:id", controller.NewUserController().GetListuser)
-	}
-
-	return r
-}
+// 	return r
+// }
