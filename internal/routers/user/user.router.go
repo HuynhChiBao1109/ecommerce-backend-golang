@@ -1,9 +1,7 @@
 package user
 
 import (
-	"ecommerce-backend-golang/internal/controller"
-	"ecommerce-backend-golang/internal/repo"
-	"ecommerce-backend-golang/internal/service"
+	"ecommerce-backend-golang/internal/wire"
 
 	"github.com/gin-gonic/gin"
 )
@@ -12,13 +10,11 @@ type UserRouter struct{}
 
 func (pr *UserRouter) InitUserRouter(Router *gin.RouterGroup) {
 
-	ur := repo.NewUserRepository()
-	us := service.NewUserService(ur)
-	userHandlerNonDependency := controller.NewUserController(us)
+	userController, _ := wire.InitRouterUserHandler()
 
 	userRouterPublic := Router.Group("/user")
 	{
-		userRouterPublic.GET("/register", userHandlerNonDependency.Register)
+		userRouterPublic.GET("/register", userController.Register)
 		userRouterPublic.POST("/otp")
 	}
 
